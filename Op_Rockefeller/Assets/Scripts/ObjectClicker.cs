@@ -6,29 +6,28 @@ using TMPro;
 
 public class ObjectClicker : MonoBehaviour
 {
+    // Reference to UI Canvas
     [SerializeField]
-    GameObject UI_Unit;
-    
+    GameObject UI;
+
+    // TMP Text to update on canvas
     [SerializeField]
     TextMeshProUGUI text;
 
     // Update is called once per frame
     void Update()
     {
+        // Hit a raycast on object
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, 1000.0f))
             {
+                // hit True if hits an object with *Mesh Collider*
                 if (hit.transform != null)
                 {
-                    //switch (hit.transform.gameObject.name)
-                    //{
-                    //    case "Unit": UI_Unit.SetActive(true); break;
-                    //    default: print("Other than Unit"); break;
-                    //}
-
-                    UI_Unit.SetActive(true);
+                    // Display UI Canvas on hit
+                    UI.SetActive(true);
                     text.SetText(hit.transform.gameObject.name);
                     //print(hit.transform.gameObject.name);
                 }
@@ -36,8 +35,9 @@ public class ObjectClicker : MonoBehaviour
         }
     }
 
+    // Function to close the UI on close button click
     public void CloseUI()
     {
-        UI_Unit.SetActive(false);
+        UI.SetActive(false);
     }
 }

@@ -3,7 +3,12 @@ guid: ad5be2bf72e82b940be08bb04a44526a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: deco_space_sphere
+    second: {fileID: 2100000, guid: 4942b8908f389428fad9b9e54fbea5a0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

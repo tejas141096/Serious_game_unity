@@ -34,12 +34,12 @@ public class ObjectClicker : MonoBehaviour
         Inventory.SetActive(false);
         item.Add(GameObject.Find("Pyramid"), (0, false));
         item.Add(GameObject.Find("Pyramid (2)"), (1, false));
-        item.Add(GameObject.Find("Box"), (2, false));
+        item.Add(GameObject.Find("space_panel"), (2, false));
         item.Add(GameObject.Find("Box (1)"), (3, false));
         item.Add(GameObject.Find("Box (2)"), (4, false));
         item.Add(GameObject.Find("space_sphere"), (5, false));
         item.Add(GameObject.Find("space_sphere (1)"), (6, false));
-        item.Add(GameObject.Find("Pipe"), (7, false));
+        item.Add(GameObject.Find("space_pipe"), (7, false));
     }
 
     // Update is called once per frame

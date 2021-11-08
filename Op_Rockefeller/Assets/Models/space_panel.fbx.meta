@@ -3,7 +3,12 @@ guid: 98e37fb58297f6e4d8ff05542f85ebe3
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space_panel
+    second: {fileID: 2100000, guid: f8de9c74739304c8f817ccc8bec038bc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

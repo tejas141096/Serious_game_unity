@@ -56,14 +56,17 @@ public class ObjectClicker : MonoBehaviour
                     // hit True if hits an object with *Mesh Collider*
                     if (hit.transform != null)
                     {
-                        // Display UI Canvas on hit
-                        UI.SetActive(true);
-                        Headertext.SetText(hit.transform.gameObject.name);
-                        Detailstext.SetText(hit.transform.gameObject.name);
+                        var data = hit.transform.gameObject.GetComponent<TextData>();
+                        if (data != null) {
+                            // Display UI Canvas on hit
+                            UI.SetActive(true);
+                            Headertext.SetText(data.Title);
+                            Detailstext.SetText(data.Description);
 
-                        lastGameObject = hit.transform.gameObject;
-                        //print(lastGameObject.GetType());
-                        //print(hit.transform.gameObject.name);
+                            lastGameObject = hit.transform.gameObject;
+                            //print(lastGameObject.GetType());
+                            //print(hit.transform.gameObject.name);
+                        }
                     }
                 }
             }

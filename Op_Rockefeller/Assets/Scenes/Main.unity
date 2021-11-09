@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.009782872, g: 0.051867522, b: 0.15223652, a: 1}
+  m_IndirectSpecularColor: {r: 0.009786322, g: 0.05188985, b: 0.15229288, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -366,6 +366,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 139559289}
   speed: 60
+--- !u!114 &139559292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139559289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe7d80aa0b668f448cbd4d2d3885fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Pyramid0001
+  Description: Blablablablablabla
 --- !u!4 &139559293 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 17471adce74153c4a8a8d7d4818b4de3, type: 3}
@@ -639,6 +653,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5060444177187149915, guid: 98e37fb58297f6e4d8ff05542f85ebe3, type: 3}
+--- !u!114 &259285633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259285629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe7d80aa0b668f448cbd4d2d3885fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Temperature regulator
+  Description: Powered by another silver-zinc battery, the unit keeps the temperature
+    of the pressurized nitrogen inside the satellite between 68 and 97 F. In case
+    of failure, the unit will also send out stress signal via the radio transmitter.
 --- !u!1001 &259952034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -664,15 +694,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8dccd27902524078b85a8c06b2c63af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.040207
+      value: 3.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8dccd27902524078b85a8c06b2c63af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.432722
+      value: -3.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8dccd27902524078b85a8c06b2c63af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.2202063
+      value: -13.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8dccd27902524078b85a8c06b2c63af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -745,7 +775,23 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -951608786083511892, guid: 018f022d8910bb34eb4952e2a0a83967, type: 3}
+  m_Mesh: {fileID: -951608786083511892, guid: f8dccd27902524078b85a8c06b2c63af, type: 3}
+--- !u!114 &259952039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259952036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe7d80aa0b668f448cbd4d2d3885fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Antennas
+  Description: 'Two pairs of antennas with 7.9 and 9.5 ft in length, creating an
+    almost spherical radiation pattern. Used for transmitting collected data to ground
+    observation:'
 --- !u!1 &286201325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,11 +1046,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17471adce74153c4a8a8d7d4818b4de3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7227222
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17471adce74153c4a8a8d7d4818b4de3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.8697939
+      value: -0.93
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17471adce74153c4a8a8d7d4818b4de3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1306,7 +1352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c8cfe6cefae78e844b31ab3333cab802, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1b0c141d6989594cb346470313b4964, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1621,15 +1667,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98e37fb58297f6e4d8ff05542f85ebe3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1302066
+      value: 14.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98e37fb58297f6e4d8ff05542f85ebe3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7227222
+      value: -1.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98e37fb58297f6e4d8ff05542f85ebe3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.869794
+      value: -7.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98e37fb58297f6e4d8ff05542f85ebe3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3089,11 +3135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f77b4177ec354d04dba605b665f8c30d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7227222
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f77b4177ec354d04dba605b665f8c30d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.869794
+      value: 6.19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f77b4177ec354d04dba605b665f8c30d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3197,8 +3243,8 @@ MonoBehaviour:
     libero eu fringilla varius, augue metus egestas ante, sit amet imperdiet nisl
     risus at ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b929e1312edaf4b22a3e318fc2b66727, type: 2}
-  m_sharedMaterial: {fileID: 673994235108181354, guid: b929e1312edaf4b22a3e318fc2b66727, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5326038fade3ea746bceaad920fbb366, type: 2}
+  m_sharedMaterial: {fileID: 7903169786195698795, guid: 5326038fade3ea746bceaad920fbb366, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3305,6 +3351,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1137949392}
   speed: 60
+--- !u!114 &1137949395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137949392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe7d80aa0b668f448cbd4d2d3885fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Pyramid0001
+  Description: Blablablablablabla
 --- !u!4 &1137949396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 17471adce74153c4a8a8d7d4818b4de3, type: 3}
@@ -3577,7 +3637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: efee20b64d1e73942a29ba61ce3379c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b231c7a9ce68bc34d9b34b80b214eac1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4244,7 +4304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482569707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1302066, y: 0.7227222, z: 2.130206}
+  m_LocalPosition: {x: -2.1302066, y: 0.7227222, z: 5.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1906223305}
@@ -4463,8 +4523,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b231c7a9ce68bc34d9b34b80b214eac1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4581,7 +4641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548821395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -3.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4652,10 +4712,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56
+  m_fontSize: 60.1
   m_fontSizeBase: 56
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -4930,7 +4990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5214,11 +5274,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f77b4177ec354d04dba605b665f8c30d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7227222
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f77b4177ec354d04dba605b665f8c30d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.869794
+      value: 3.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f77b4177ec354d04dba605b665f8c30d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5481,6 +5541,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1796307646}
   speed: 60
+--- !u!114 &1796307649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796307646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe7d80aa0b668f448cbd4d2d3885fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Outershell
+  Description: Two thin hemispheres made of aluminum magnesium titanium alloy, covered
+    in a polished heat shield. Weigh at 92 lb, 23 inch in diameter. The two pieces
+    are connected by 36 bolts and are hermetically sealed with O-rings.
 --- !u!1 &1804336177
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,15 +5732,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad5be2bf72e82b940be08bb04a44526a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.32797718
+      value: -7.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad5be2bf72e82b940be08bb04a44526a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26000202
+      value: -3.57
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad5be2bf72e82b940be08bb04a44526a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.03972125
+      value: -6.29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad5be2bf72e82b940be08bb04a44526a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5733,6 +5809,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1826616437}
   speed: 60
+--- !u!114 &1826616440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826616437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe7d80aa0b668f448cbd4d2d3885fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Outershell
+  Description: 'Two thin hemispheres made of aluminum magnesium titanium alloy, covered
+    in a polished heat shield. Weigh at 92 lb, 23 inch in diameter. The two pieces
+    are connected by 36 bolts and are hermetically sealed with O-rings. '
 --- !u!1 &1835776498
 GameObject:
   m_ObjectHideFlags: 0
@@ -5941,7 +6033,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a58643a19952e254d995fc0dc078e093, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b231c7a9ce68bc34d9b34b80b214eac1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5992,6 +6084,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1906223301}
   speed: 60
+--- !u!114 &1906223304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906223301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe7d80aa0b668f448cbd4d2d3885fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Radio transmitter
+  Description: 'Powered by two sliver-zinc batteries, the radio transmitter works
+    on two frequencies: 20.005 and 40.002 MHz. Signals on the first frequency were
+    transmitted in 0.3 s pulses, with pauses of the same duration filled by pulses
+    on the second frequency. '
 --- !u!4 &1906223305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f77b4177ec354d04dba605b665f8c30d, type: 3}
@@ -6180,6 +6289,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1982859273}
   speed: 60
+--- !u!114 &1982859276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982859273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe7d80aa0b668f448cbd4d2d3885fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Radio transmitter
+  Description: 'Powered by two sliver-zinc batteries, the radio transmitter works
+    on two frequencies: 20.005 and 40.002 MHz. Signals on the first frequency were
+    transmitted in 0.3 s pulses, with pauses of the same duration filled by pulses
+    on the second frequency. '
 --- !u!4 &1982859277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f77b4177ec354d04dba605b665f8c30d, type: 3}

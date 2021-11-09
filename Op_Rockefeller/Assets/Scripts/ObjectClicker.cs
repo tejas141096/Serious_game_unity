@@ -113,7 +113,7 @@ public class ObjectClicker : MonoBehaviour
         print(button);
         if (button == "CombineShipButton2")
         {
-            if (item["Pyramid"].Item2 && item["space_sphere"].Item2 && item["space_panel"].Item2)
+            if (item["Pyramid"].Item2 && item["Pyramid (2)"].Item2 && item["space_panel"].Item2 && item["space_sphere"].Item2 && item["space_sphere (1)"].Item2 && item["space_pipe"].Item2)
             {
                 CombineShipUI.SetActive(true);
                 UI.SetActive(false);
@@ -129,21 +129,21 @@ public class ObjectClicker : MonoBehaviour
             }
         }
 
-        if (button == "CombineShipButton1")
-        {
-            if (item["Pyramid (2)"].Item2 && item["space_sphere (1)"].Item2 && item["space_pipe"].Item2)
-            {
-                CombineShipUI.SetActive(true);
-                UI.SetActive(false);
-                Inventory.SetActive(false);
-                InventoryButton.SetActive(false);
+        //if (button == "CombineShipButton1")
+        //{
+        //    if (item["Pyramid (2)"].Item2 && item["space_sphere (1)"].Item2 && item["space_pipe"].Item2)
+        //    {
+        //        CombineShipUI.SetActive(true);
+        //        UI.SetActive(false);
+        //        Inventory.SetActive(false);
+        //        InventoryButton.SetActive(false);
 
-                var data = EventSystem.current.currentSelectedGameObject.GetComponent<CSTextData>();
-                CSTextHeader.SetText(data.Title);
-                CSTextDetails.SetText(data.Description);
-                CSImage.sprite = data.image;
-            }
-        }
+        //        var data = EventSystem.current.currentSelectedGameObject.GetComponent<CSTextData>();
+        //        CSTextHeader.SetText(data.Title);
+        //        CSTextDetails.SetText(data.Description);
+        //        CSImage.sprite = data.image;
+        //    }
+        //}
     }
 
     public void CloseCombineShip()

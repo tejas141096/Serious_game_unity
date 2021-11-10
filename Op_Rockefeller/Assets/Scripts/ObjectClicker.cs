@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class ObjectClicker : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class ObjectClicker : MonoBehaviour
     [SerializeField]
     GameObject InventoryButton;
 
+    [SerializeField]
+    GameObject CombineShipUI;
+
     // TMP Text to update on canvas
     [SerializeField]
     TextMeshProUGUI Headertext;
@@ -23,23 +27,31 @@ public class ObjectClicker : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI Detailstext;
 
+    [SerializeField]
+    TextMeshProUGUI CSTextHeader;
+
+    [SerializeField]
+    TextMeshProUGUI CSTextDetails;
+
+    [SerializeField]
+    Image CSImage;
+
     GameObject lastGameObject;
 
-    Dictionary<GameObject, (int, bool)> item = new Dictionary<GameObject, (int, bool)>();
+    Dictionary<string, (int, bool)> item = new Dictionary<string, (int, bool)>();
     RaycastHit hit;
 
     void Start()
     {
         UI.SetActive(false);
         Inventory.SetActive(false);
-        item.Add(GameObject.Find("Pyramid"), (0, false));
-        item.Add(GameObject.Find("Pyramid (2)"), (1, false));
-        item.Add(GameObject.Find("space_panel"), (2, false));
-        item.Add(GameObject.Find("Box (1)"), (3, false));
-        item.Add(GameObject.Find("Box (2)"), (4, false));
-        item.Add(GameObject.Find("space_sphere"), (5, false));
-        item.Add(GameObject.Find("space_sphere (1)"), (6, false));
-        item.Add(GameObject.Find("space_pipe"), (7, false));
+        CombineShipUI.SetActive(false);
+        item.Add("Pyramid", (0, false));
+        item.Add("Pyramid (2)", (1, false));
+        item.Add("space_panel", (2, false));
+        item.Add("space_sphere", (3, false));
+        item.Add("space_sphere (1)", (4, false));
+        item.Add("space_pipe", (5, false));
     }
 
     // Update is called once per frame
@@ -57,7 +69,8 @@ public class ObjectClicker : MonoBehaviour
                     if (hit.transform != null)
                     {
                         var data = hit.transform.gameObject.GetComponent<TextData>();
-                        if (data != null) {
+                        if (data != null)
+                        {
                             // Display UI Canvas on hit
                             UI.SetActive(true);
                             Headertext.SetText(data.Title);
@@ -73,17 +86,17 @@ public class ObjectClicker : MonoBehaviour
         }
     }
 
-    public void CollectObject ()
+    public void CollectObject()
     {
         AddObjectToInventory(lastGameObject);
     }
 
-    void AddObjectToInventory (GameObject lastGameObject)
+    void AddObjectToInventory(GameObject lastGameObject)
     {
         Inventory.SetActive(true);
-        item[lastGameObject] = (item[lastGameObject].Item1, true);
-        string UIPaneltoUpdate = "ItemPanel (" + item[lastGameObject].Item1 + ")";
-        string UIImagetoUpdate = "ItemLogo (" + item[lastGameObject].Item1 + ")";
+        item[lastGameObject.name] = (item[lastGameObject.name].Item1, true);
+        string UIPaneltoUpdate = "ItemPanel (" + item[lastGameObject.name].Item1 + ")";
+        string UIImagetoUpdate = "ItemLogo (" + item[lastGameObject.name].Item1 + ")";
         GameObject InventoryUIPanelToUpdate = GameObject.Find(UIPaneltoUpdate);
         GameObject InventoryUIImageToUpdate = GameObject.Find(UIImagetoUpdate);
 
@@ -92,6 +105,53 @@ public class ObjectClicker : MonoBehaviour
         lastGameObject.SetActive(false);
 
         Inventory.SetActive(false);
+    }
+
+    public void OpenCombineShip()
+    {
+        var button = EventSystem.current.currentSelectedGameObject.name;
+        print(button);
+        if (button == "CombineShipButton2")
+        {
+            if (item["Pyramid"].Item2 && item["space_sphere"].Item2 && item["space_panel"].Item2)
+            {
+                CombineShipUI.SetActive(true);
+                UI.SetActive(false);
+                Inventory.SetActive(false);
+                InventoryButton.SetActive(false);
+
+                var data = EventSystem.current.currentSelectedGameObject.GetComponent<CSTextData>();
+
+                print(data.Title);
+                CSTextHeader.SetText(data.Title);
+                CSTextDetails.SetText(data.Description);
+                CSImage.sprite = data.image;
+            }
+        }
+
+        if (button == "CombineShipButton1")
+        {
+            if (item["Pyramid (2)"].Item2 && item["space_sphere (1)"].Item2 && item["space_pipe"].Item2)
+            {
+                CombineShipUI.SetActive(true);
+                UI.SetActive(false);
+                Inventory.SetActive(false);
+                InventoryButton.SetActive(false);
+
+                var data = EventSystem.current.currentSelectedGameObject.GetComponent<CSTextData>();
+                CSTextHeader.SetText(data.Title);
+                CSTextDetails.SetText(data.Description);
+                CSImage.sprite = data.image;
+            }
+        }
+    }
+
+    public void CloseCombineShip()
+    {
+        UI.SetActive(false);
+        Inventory.SetActive(false);
+        InventoryButton.SetActive(true);
+        CombineShipUI.SetActive(false);
     }
 
     public void OpenInventory()
